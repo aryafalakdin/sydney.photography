@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Falakdin Photographer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Title Section with Background Image -->
+    
+    <header class="title-section">
+        <h1>Arya Falakdin</h1>
+        
+    </header>
+  
+
+    <!-- About Section with Portrait and Bio -->
+    <section class="about">
+        <div class="portrait">
+            <img src="pic.jpg" alt="Photographer Portrait">
+        </div>
+        <div class="bio">
+            <h2>Who am i?</h2>
+            <p>I'm a passionate photographer with a love for capturing moments that tell stories, evoke emotion, and leave a lasting impression. With a keen eye for detail and a creative approach to composition, I specialize in various genres, including portraits, landscapes, events, and commercial photography.
+                I believe in building genuine connections with my clients, understanding their vision, and exceeding their expectations. Whether it's a personal photoshoot, a corporate event, or a commercial campaign, I'm committed to delivering exceptional results that resonate with audiences.
+                Whether you're looking to capture cherished memories, elevate your brand, or bring your creative projects to life, I'm here to collaborate and bring your vision to fruition. Let's work together to create images that leave a lasting impression.</p>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    
+    <section class="gallery">
+        <div class="gallery-item">
+            <a href="1.jpg" class="lightbox">
+                <img src="1.jpg" alt="Photography 1">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="2.jpg" class="lightbox">
+                <img src="2.jpg" alt="Photography 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="3.jpg" class="lightbox">
+                <img src="3.jpg" alt="Photography 3">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="4.jpg" class="lightbox">
+                <img src="4.jpg" alt="Photography 4">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="5.jpg" class="lightbox">
+                <img src="5.jpg" alt="Photography 5">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="6.jpg" class="lightbox">
+                <img src="6.jpg" alt="Photography 6">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="7.jpg" class="lightbox">
+                <img src="7.jpg" alt="Photography 7">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="8.jpg" class="lightbox">
+                <img src="8.jpg" alt="Photography 8">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="9.jpg" class="lightbox">
+                <img src="9.jpg" alt="Photography 9">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="10.jpg" class="lightbox">
+                <img src="10.jpg" alt="Photography 10">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="11.jpg" class="lightbox">
+                <img src="11.jpg" alt="Photography 11">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="12.jpg" class="lightbox">
+                <img src="12.jpg" alt="Photography 12">
+            </a>
+        </div>
+    </section>
+    <script>
+    $(document).ready(function() {
+    // Hide the lightbox overlay by default
+    $("#lightbox-overlay").hide();
+
+    // Click on a gallery item link
+    $(".lightbox").on("click", function(event) {
+        event.preventDefault(); // Prevent the default action of the anchor
+
+        var imageSrc = $(this).attr("href"); // Get the image source
+        $("#lightbox-image").attr("src", imageSrc); // Set the image source in the lightbox
+        $("#lightbox-overlay").fadeIn(); // Show the lightbox overlay
+    });
+
+    // Close lightbox when clicking on the close button or outside the image
+    $("#close-lightbox, #lightbox-overlay").on("click", function() {
+        $("#lightbox-overlay").fadeOut();
+    });
+
+    // Prevent closing when clicking on the image itself
+    $("#lightbox-image").on("click", function(event) {
+        event.stopPropagation();
+    });
+});
+
+
+    </script>
+     <!-- Lightbox Overlay -->
+     <div id="lightbox-overlay">
+        <span id="close-lightbox">×</span>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+	
+    <!--jotform section-->
+    
+    <iframe
+      id="JotFormIFrame-243108210938856"
+      title="Fill in a few detials so we can get started"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/243108210938856"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-243108210938856']", "https://form.jotform.com/")</script>
+    
+    <!-- Footer Section with Social Icons -->
+    <footer class="footer">
+<p>Arya Falakdin, Copyright © 2024</p>
+        <div class="social-icons">
+            
+            <div class="social-icon">
+                <a href="https://www.fiverr.com/alpha__mega?public_mode=true" target="_blank"><img src="fiver.jpg" alt="fiver"></a>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/lazy.pix.syd" target="_blank"><img src="insta.jpg" alt="instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
