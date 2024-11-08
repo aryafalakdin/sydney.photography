@@ -1,1 +1,1 @@
-https://aryafalakdin.github.io/photography
+https://aryafalakdin.github.io/sydney.photography
